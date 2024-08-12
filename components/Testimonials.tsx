@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { InfiniteMovingCards } from "./ui/infinitecards";
+import { InfiniteMovingCards } from "@/components/ui/InfiniteCards";
 import { testimonials } from "@/utils";
 import { useGSAP } from "@gsap/react";
 import { animateWithGsap } from "@/utils/animation";
