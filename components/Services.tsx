@@ -98,9 +98,10 @@ const ServiceCard = ({
   }[];
 }) => {
   return (
-    <div className="bg-gradient-to-b from-[#FEFCF020] hover:scale-105 transition-all ease-in-out to-[#ffffff] border border-gray-300 p-8 rounded-xl lg:w-[27rem] md:w-1/2 w-full">
+      <>
       {items.map((items, id) => (
-        <>
+    // eslint-disable-next-line react/jsx-key
+    <div className="bg-gradient-to-b from-[#FEFCF020] hover:scale-105 transition-all ease-in-out to-[#ffffff] border border-gray-300 p-8 rounded-xl lg:w-[27rem] md:w-1/2 w-full">
           <div className="flex justify-center">
           <Image
             src={items.image}
@@ -127,10 +128,10 @@ const ServiceCard = ({
             {items.description}
           </p>
         </div>
-        </>
-        ))}
       
       
     </div>
+        ))}
+        </>
   );
 };
