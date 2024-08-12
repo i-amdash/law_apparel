@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { resultImg, starImg, truckImg } from "@/utils";
+import { resultImg, services, starImg, truckImg } from "@/utils";
 import { useGSAP } from "@gsap/react";
 import { animateWithGsap } from "../utils/animation";
 import { cn } from "@/lib/utils";
@@ -77,28 +77,7 @@ const Services = () => {
       </div>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         <ServiceCard
-          image={truckImg}
-          title="Fast Delivery"
-          description="With O&B Apparels you never have to worry about your legal attires being delivered late as we have one of the best track records of on time deliveries which has also been
-                stated time without number by our clients in the past, you get your attires as and when due with our 24 hour delivery system."
-          className="service_desc_text"
-          secondClassName="service_text"
-        />
-        <ServiceCard
-          image={starImg}
-          title="Client Centric Approach"
-          description="With O&B Apparels you never have to worry about your legal attires being delivered late as we have one of the best track records of on time deliveries which has also been
-                stated time without number by our clients in the past, you get your attires as and when due with our 24 hour delivery system."
-          className="service_desc_text2"
-          secondClassName="service_text2"
-        />
-        <ServiceCard
-          image={resultImg}
-          title="Result Driven"
-          description="With O&B Apparels you never have to worry about your legal attires being delivered late as we have one of the best track records of on time deliveries which has also been
-                stated time without number by our clients in the past, you get your attires as and when due with our 24 hour delivery system."
-          className="service_desc_text3"
-          secondClassName="service_text3"
+          items={services}
         />
       </div>
     </div>
@@ -108,46 +87,50 @@ const Services = () => {
 export default Services;
 
 const ServiceCard = ({
-  image,
-  title,
-  description,
-  className,
-  secondClassName,
+  items
 }: {
+  items: {
   image: string;
   title: string;
   description: string;
   className: string;
   secondClassName: string;
+  }[];
 }) => {
   return (
     <div className="bg-gradient-to-b from-[#FEFCF020] hover:scale-105 transition-all ease-in-out to-[#ffffff] border border-gray-300 p-8 rounded-xl lg:w-[27rem] md:w-1/2 w-full">
-      <div className="flex justify-center">
-        <Image
-          src={image}
-          className="w-40 h-40 g_grow feature-video"
-          alt="delivery"
-        />
-      </div>
-
-      <div className="pt-16 pb-4">
-        <h2
-          className={cn(
-            "font-semibold text-xl text-justify text-slate-950  feature-text",
-            secondClassName
-          )}
-        >
-          {title}
-        </h2>
-        <p
-          className={cn(
-            "font-normal text-md text-justify text-[#cccaca] py-2  feature-text",
-            className
-          )}
-        >
-          {description}
-        </p>
-      </div>
+      {items.map((items, id) => (
+        <>
+          <div className="flex justify-center">
+          <Image
+            src={items.image}
+            className="w-40 h-40 g_grow feature-video"
+            alt="delivery"
+          />
+        </div>
+  
+        <div className="pt-16 pb-4">
+          <h2
+            className={cn(
+              "font-semibold text-xl text-justify text-slate-950  feature-text",
+              items.secondClassName
+            )}
+          >
+            {items.title}
+          </h2>
+          <p
+            className={cn(
+              "font-normal text-md text-justify text-[#cccaca] py-2  feature-text",
+              items.className
+            )}
+          >
+            {items.description}
+          </p>
+        </div>
+        </>
+        ))}
+      
+      
     </div>
   );
 };

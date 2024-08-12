@@ -119,4 +119,27 @@ export const testimonials = [
     },
   ];
 
+  export const services = [
+    {
+      image: "/images/truck.png",
+          title:"Fast Delivery",
+          description:"With O&B Apparels you never have to worry about your legal attires being delivered late as we have one of the best track records of on time deliveries which has also been stated time without number by our clients in the past, you get your attires as and when due with our 24 hour delivery system.",
+          className: "service_desc_text",
+          secondClassName: "service_text"
+    },
+    {
+      image: "/images/star.png",
+          title:"Client Centric Approach",
+          description:"With O&B Apparels you never have to worry about your legal attires being delivered late as we have one of the best track records of on time deliveries which has also been stated time without number by our clients in the past, you get your attires as and when due with our 24 hour delivery system.",
+          className: "service_desc_text2",
+          secondClassName: "service_text2"
+    },
+    {
+      image: "/images/result.png",
+          title:"Result Driven",
+          description:"With O&B Apparels you never have to worry about your legal attires being delivered late as we have one of the best track records of on time deliveries which has also been stated time without number by our clients in the past, you get your attires as and when due with our 24 hour delivery system.",
+          className: "service_desc_text3",
+          secondClassName: "service_text3"
+    }
+  ];
   
