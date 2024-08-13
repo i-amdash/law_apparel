@@ -2,7 +2,7 @@
 
 import logo from "/public/images/logo.png";
 import billboard from "/public/images/billboard.jpg";
-import about from "/public/images/about.jpeg";
+import about from "/public/images/home5.jpeg";
 import hero from "/public/images/hero.jpg";
 import gold from "/public/images/gold.jpg";
 import regular from "/public/images/regular.jpg";
@@ -121,24 +121,24 @@ export const testimonials = [
 
   export const services = [
     {
-      image: "/images/truck.png",
+      image: "/images/premium.jpg",
           title:"Fast Delivery",
           description:"With O&B Apparels you never have to worry about your legal attires being delivered late as we have one of the best track records of on time deliveries which has also been stated time without number by our clients in the past, you get your attires as and when due with our 24 hour delivery system.",
-          className: "service_desc_text",
+          className: "g_grow",
           secondClassName: "service_text"
     },
     {
-      image: "/images/star.png",
+      image: "/images/regular.jpg",
           title:"Client Centric Approach",
           description:"With O&B Apparels you never have to worry about your legal attires being delivered late as we have one of the best track records of on time deliveries which has also been stated time without number by our clients in the past, you get your attires as and when due with our 24 hour delivery system.",
-          className: "service_desc_text2",
+          className: "g_grow2",
           secondClassName: "service_text2"
     },
     {
-      image: "/images/result.png",
+      image: "/images/wgr.jpg",
           title:"Result Driven",
           description:"With O&B Apparels you never have to worry about your legal attires being delivered late as we have one of the best track records of on time deliveries which has also been stated time without number by our clients in the past, you get your attires as and when due with our 24 hour delivery system.",
-          className: "service_desc_text3",
+          className: "g_grow3",
           secondClassName: "service_text3"
     }
   ];

@@ -14,48 +14,58 @@ const Services = () => {
       { scale: 1, opacity: 1, ease: "power1" },
       { scrub: 5.5 }
     );
+    animateWithGsap(
+      ".g_grow2",
+      { scale: 1, opacity: 1, ease: "power1" },
+      { scrub: 5.5 }
+    );
+    animateWithGsap(
+      ".g_grow3",
+      { scale: 1, opacity: 1, ease: "power1" },
+      { scrub: 5.5 }
+    );
     animateWithGsap(".service_text", {
       y: 0,
       opacity: 1,
       ease: "power2.inOut",
       duration: 1,
     });
-    animateWithGsap(".service_text2", {
-      y: 0,
-      opacity: 1,
-      ease: "power2.inOut",
-      duration: 1,
-    });
-    animateWithGsap(".service_text3", {
-      y: 0,
-      opacity: 1,
-      ease: "power2.inOut",
-      duration: 1,
-    });
-    animateWithGsap(".service_title", {
-      y: 0,
-      opacity: 1,
-      ease: "power2.inOut",
-      duration: 2,
-    });
-    animateWithGsap(".service_desc_text", {
-      y: 0,
-      opacity: 1,
-      ease: "power2.inOut",
-      duration: 2,
-    });
-    animateWithGsap(".service_desc_text2", {
-      y: 0,
-      opacity: 1,
-      ease: "power2.inOut",
-      duration: 2,
-    });
-    animateWithGsap(".service_desc_text3", {
-      y: 0,
-      opacity: 1,
-      ease: "power2.inOut",
-      duration: 2,
-    });
+    // animateWithGsap(".service_text2", {
+    //   y: 0,
+    //   opacity: 1,
+    //   ease: "power2.inOut",
+    //   duration: 1,
+    // });
+    // animateWithGsap(".service_text3", {
+    //   y: 0,
+    //   opacity: 1,
+    //   ease: "power2.inOut",
+    //   duration: 1,
+    // });
+    // animateWithGsap(".service_title", {
+    //   y: 0,
+    //   opacity: 1,
+    //   ease: "power2.inOut",
+    //   duration: 2,
+    // });
+    // animateWithGsap(".service_desc_text", {
+    //   y: 0,
+    //   opacity: 1,
+    //   ease: "power2.inOut",
+    //   duration: 2,
+    // });
+    // animateWithGsap(".service_desc_text2", {
+    //   y: 0,
+    //   opacity: 1,
+    //   ease: "power2.inOut",
+    //   duration: 2,
+    // });
+    // animateWithGsap(".service_desc_text3", {
+    //   y: 0,
+    //   opacity: 1,
+    //   ease: "power2.inOut",
+    //   duration: 2,
+    // });
   }, []);
 
   return (
@@ -75,10 +85,12 @@ const Services = () => {
           apparels from.
         </p>
       </div>
-      <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
+      <div className="w-full">
+      <div className="my-20 flex flex-col lg:flex-row justify-between items-center lg:px-24 px-8">
         <ServiceCard
           items={services}
         />
+      </div>
       </div>
     </div>
   );
@@ -99,10 +111,12 @@ const ServiceCard = ({
 }) => {
   return (
       <>
-      {items.map((items, id) => (
+      {items.map((item, id) => (
     // eslint-disable-next-line react/jsx-key
-    <div className="bg-gradient-to-b from-[#FEFCF020] hover:scale-105 transition-all ease-in-out to-[#ffffff] border border-gray-300 p-8 rounded-xl lg:w-[27rem] md:w-1/2 w-full">
-          <div className="flex justify-center">
+    <div className={cn("hover:scale-105 transition-all bg-contain bg-no-repeat bg-center feature-video lg:h-[32rem] h-[20rem] ease-in-out p-8 rounded-xl w-[18rem] lg:w-[32rem]", item.className)}
+    style={{ backgroundImage: `url(${item.image})`}}
+    >
+          {/* <div className="flex justify-center">
           <Image
             src={items.image}
             className="w-40 h-40 g_grow feature-video"
@@ -127,7 +141,7 @@ const ServiceCard = ({
           >
             {items.description}
           </p>
-        </div>
+        </div> */}
       
       
     </div>
