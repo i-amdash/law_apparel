@@ -42,12 +42,12 @@ const Services = () => {
     //   ease: "power2.inOut",
     //   duration: 1,
     // });
-    // animateWithGsap(".service_title", {
-    //   y: 0,
-    //   opacity: 1,
-    //   ease: "power2.inOut",
-    //   duration: 2,
-    // });
+    animateWithGsap(".service_title", {
+      y: 0,
+      opacity: 1,
+      ease: "power2.inOut",
+      duration: 2,
+    });
     // animateWithGsap(".service_desc_text", {
     //   y: 0,
     //   opacity: 1,
