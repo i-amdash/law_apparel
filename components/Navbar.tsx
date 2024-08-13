@@ -22,14 +22,10 @@ const Navbar = () => {
 
         <div className="flex flex-1 justify-center">
           {navLists.map((nav) => (
-            <div key={nav} className="px-5 text-sm cursor-pointer hover:text-[#7a7a7a]">
+            <div key={nav} className="md:px-5 px-3  text-sm cursor-pointer hover:text-[#7a7a7a]">
               {nav}
             </div>
           ))}
-        </div>
-
-        <div className="flex items-baseline gap-7 max-sm:justify-end max-sm:flex-1 hover:text-[#7a7a7a]">
-          <CiShop />
         </div>
       </nav>
     </header>
