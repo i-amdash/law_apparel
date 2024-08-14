@@ -120,6 +120,8 @@ const ServiceCard = ({
           <Image
             src={items.image}
             className="w-40 h-40 g_grow feature-video"
+            width={40}
+            height={40}
             alt="delivery"
           />
         </div>
@@ -142,7 +144,6 @@ const ServiceCard = ({
             {items.description}
           </p>
         </div> */}
-      
       
     </div>
         ))}
