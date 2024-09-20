@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
-import { heroImg, heroImg2, heroImg3, heroImg4, homeImg1, homeImg10, homeImg11, homeImg3 } from "@/utils";
+import Lenis from "lenis";
+import { heroImg, heroImg2, heroImg3, heroImg4 } from "@/utils";
 import Image from "next/image";
 import Shop from "@/app/(pages)/(shop)/shop/(routes)/page";
 
@@ -141,7 +141,7 @@ export default function Transition() {
         scrollTrigger: {
           trigger: [textRef.current, secondTextRef.current],  // Element to be watched
           start: "top 80%",  // When the top of the element is at 80% of the viewport height
-          end: "bottom 70%", // When the bottom of the element reaches 20% of the viewport
+          end: "bottom 60%", // When the bottom of the element reaches 20% of the viewport
           scrub: true,  // Smoothly animates as you scroll
           toggleActions: "play none none reverse"  // Animation actions
         }
