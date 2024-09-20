@@ -101,15 +101,15 @@ export default function Transition() {
           const maxScaleFactor = Math.max(viewportWidth, viewportHeight) / 100;
         
           // Scale up the element based on the scroll progress
-          let scaleUp: number = 1 + maxScaleFactor * self.progress;
+          let scaleUp = 1 + maxScaleFactor * self.progress;
+
+          const revealer = document.querySelector('.revealer') as HTMLElement | null;
         
           // Define a GSAP timeline
           const tl = gsap.timeline();
 
-          const revealer = document.querySelector('.revealer');
-
           if (self.progress === 1) {
-            scaleUp = viewportWidth / (revealer.offsetWidth || 1);
+            scaleUp = viewportWidth / revealer!.offsetWidth;
           }
         
           // Add the scale-up animation
