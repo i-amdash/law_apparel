@@ -33,9 +33,6 @@ const Summary = () => {
         return await verify();
       };
 
-      // if (!response.status) {
-      //   window.location = response;
-      // }
       toast.success("Payment completed.");
 
       removeAll();
