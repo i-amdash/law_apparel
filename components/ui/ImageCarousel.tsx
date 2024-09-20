@@ -124,7 +124,11 @@ const ImageCarousel: React.FC = () => {
         {images.map((img, index) => (
           <div
             key={index}
-            ref={(el) => el && (imageRefs.current[index] = el)}
+            ref={(el) => {
+              if (el) {
+                imageRefs.current[index] = el;
+              }
+            }}
             className={`absolute inset-0 ${index === currentIndex ? 'block' : 'hidden'}`}
           >
             <Image
