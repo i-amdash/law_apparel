@@ -6,7 +6,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import { heroImg, heroImg2, heroImg3, heroImg4 } from "@/utils";
 import Image from "next/image";
-import Shop from "@/app/(pages)/(shop)/shop/(routes)/page";
+import Container from "./ui/Container";
+import Nav from "./ui/shop/Shop-Nav";
+import ProductList from "./ui/shop/ProductList";
+import { Product } from "@/types";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -156,6 +159,8 @@ export default function Transition() {
     };
   }, []);
 
+  const products: Product[] = [];
+
   return (
     <div className="container">
       <section className="info w-[100vw] h-[90vh] bg-slate-950 text-white">
@@ -233,7 +238,22 @@ export default function Transition() {
           For all the sacrifices, self-deprivations, disciplines, devotion and
           perseverance that can never be measured or quantified.
         </h1> */}
-        <Shop />
+        {/* <Shop /> */}
+        <Container>
+        <div className="space-y-10 pb-20 sm:pb-10 px-4 sm:px-6 lg:px-8">
+        
+          <Nav />
+          <p className="w-1/2">
+            Browsing for your next legal apparel to be delivered to you within 48hours with no hassle? Look no further, we sell them all here, tailored your taste.
+          </p>
+          <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
+            <ProductList 
+            title="All Packages"
+            items={products}
+            />
+          </div>
+        </div>
+      </Container>
       </section>
     </div>
   );
