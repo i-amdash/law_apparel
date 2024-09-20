@@ -69,7 +69,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="bg-white text-black p-8 flex flex-col justify-center items-center">
+    <div className="bg-white text-slate-950 p-8 flex flex-col justify-center items-center">
       <div className="w-full">
         <h1
           className="font-bold text-4xl text-center py-8 text-slate-950 opacity-0 translate-y-20"
@@ -86,7 +86,7 @@ const Services = () => {
         </p>
       </div>
       <div className="w-full">
-      <div className="py-20 flex flex-col lg:flex-row justify-between items-center gap-y-8 lg:px-24 px-8">
+      <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:px-24 px-8">
         <ServiceCard
           items={services}
         />
@@ -113,7 +113,7 @@ const ServiceCard = ({
       <>
       {items.map((item, id) => (
     // eslint-disable-next-line react/jsx-key
-    <div className={cn("hover:scale-105 transition-all bg-contain bg-no-repeat bg-center scale-110 lg:scale-150 opacity-0 lg:h-[32rem] h-[24rem] ease-in-out p-8 rounded-xl w-[24rem] lg:w-[32rem]", item.className)}
+    <div className={cn("hover:scale-105 transition-all bg-contain bg-no-repeat bg-center scale-110 lg:scale-150 opacity-0 h-[22rem] ease-in-out rounded-2xl w-full", item.className)}
     style={{ backgroundImage: `url(${item.image})`}}
     >
           {/* <div className="flex justify-center">

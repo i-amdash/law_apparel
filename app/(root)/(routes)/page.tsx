@@ -1,10 +1,12 @@
-"use client";
-import React from "react";
-import { FaMailBulk } from "react-icons/fa";
+"use client"
+import { FaShoppingBag } from "react-icons/fa";
 import AltButton from "@/components/ui/AltButton";
 
 import { useGSAP } from "@gsap/react";
 import { animateWithGsap } from "@/utils/animation";
+import ImageCarousel from "@/components/ui/ImageCarousel";
+import MobileImageCarousel from "@/components/ui/MobileImageCarousel";
+import { delay } from "framer-motion";
 
 const Home = () => {
   useGSAP(() => {
@@ -17,33 +19,55 @@ const Home = () => {
     animateWithGsap(".g_text", {
       y: 0,
       opacity: 1,
-      ease: "power2.inOut",
-      duration: 1,
+      duration: 0.5,
+      delay: 0.4
     });
   }, []);
 
   return (
-    <div className="h-[90vh] flex flex-col justify-center items-center bg-[url('../public/images/home1.jpeg')] bg-no-repeat bg-cover bg-top bg-black/40 bg-blend-overlay">
-      <div className="w-1/2 flex flex-col justify-center items-center gap-y-12">
+    <div className="h-[90vh] w-full overflow-x-hidden flex flex-col lg:flex-row justify-between items-center">
+      <MobileImageCarousel />
+      <ImageCarousel />
+      <div className=" absolute left-0 right-0 top-96 lg:top-72 flex flex-col justify-between items-center gap-8 z-10">
         <h1
-          className="text-[#B79652] text-5xl font-bold text-center opacity-0 translate-y-20"
+          className="text-[#ECBE07] text-[3rem] md:text-[7rem] font-light text-center opacity-0 translate-y-10"
           id="features_title"
         >
           O&B Apparels
         </h1>
-        <p className=" text-[#ffffff] lg:w-2/3 font-normal text-md text-center g_text opacity-0 translate-y-100">
+        {/* <p className=" text-[#ffffff] font-normal text-sm md:text-md text-center g_text opacity-0 translate-y-100">
           Exquisiteness & Affordability
         </p>
-        <a href="#contact" className="g_text opacity-0 translate-y-100">
+        <a href="/shop" className="g_text opacity-0 translate-y-100">
           <AltButton
-            title="Contact Us"
-            icon={<FaMailBulk />}
+            title="Our Products"
+            icon={<FaShoppingBag />}
             position="right"
           />
-        </a>
+        </a> */}
       </div>
     </div>
   );
 };
 
 export default Home;
+
+{
+  /* <Image 
+      src={homeImg1}
+      className="object-cover md:object-contain h-[90vh] lg:hidden bg-black brightness-75"
+      alt="home-img"
+      /> */
+}
+{
+  /* <Image 
+      src={homeImage}
+      className="object-cover object-top w-full h-[90vh] hidden lg:flex bg-black brightness-75"
+      alt="home-img"
+      />
+      <Image 
+      src={homeImg3}
+      className="object-contain h-[90vh] hidden"
+      alt="home-img"
+      /> */
+}

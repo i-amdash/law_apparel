@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
+import Transition from "@/components/Transition";
 import React from "react";
 
 export default async function DashboardLayout({
@@ -17,9 +18,10 @@ export default async function DashboardLayout({
       <Navbar />
       {children}
       <Carousel />
-      <About />
+      <Transition />
+      {/* <About />
       <Services />
-      <Ambassadors />
+      <Ambassadors /> */}
       <Testimonials />
       <Footer />
     </>

@@ -88,7 +88,7 @@ export const InfiniteCarousel = ({
       >
         {items.map((item, idx) => (
           <li
-            className="min-w-[10vw] relative flex-shrink-0 p-5 md:p-16"   
+            className="min-w-[10vw] relative flex-shrink-0 p-5 md:p-16"
             key={idx}
           >
             <blockquote>
@@ -97,10 +97,10 @@ export const InfiniteCarousel = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               <div className="relative z-20 gap-8 flex flex-row justify-center items-center">
-              <HiStar height={180} width={180} color="#F1CF64" />
-                  <span className="text-xl font-bold leading-[1.6] text-white">
-                    {item.name}
-                  </span>
+                <HiStar height={180} width={180} color="#F1CF64" />
+                <span className="text-xl font-bold leading-[1.6] text-white">
+                  {item.name}
+                </span>
               </div>
             </blockquote>
           </li>

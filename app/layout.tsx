@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Lateef, Noto_Sans, Nunito, Open_Sans, Playfair_Display, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 
-const inter = Sora({ subsets: ["latin"] });
+const inter = Playfair_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "O&B Apparel",

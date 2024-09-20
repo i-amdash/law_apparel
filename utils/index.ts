@@ -3,7 +3,10 @@
 import logo from "/public/images/logo.png";
 import billboard from "/public/images/billboard.jpg";
 import about from "/public/images/home5.jpeg";
-import hero from "/public/images/hero.jpg";
+import hero from "/public/images/hero.png";
+import hero2 from "/public/images/hero2.png";
+import hero3 from "/public/images/hero3.png";
+import hero4 from "/public/images/hero4.png";
 import gold from "/public/images/gold.jpg";
 import regular from "/public/images/regular.jpg";
 import wgr from "/public/images/wgr.jpg";
@@ -11,12 +14,33 @@ import premium from "/public/images/premium.jpg";
 import truck from "/public/images/truck.png";
 import star from "../public/images/star.png";
 import result from "../public/images/result.png";
+import homeImg from "/public/images/home.png";
+import home from "/public/images/home1.jpeg";
+import home2 from "/public/images/home2.jpeg";
+import home3 from "/public/images/home3.jpeg";
+import home4 from "/public/images/home4.jpeg";
+import home5 from "/public/images/home5.jpeg";
+import home6 from "/public/images/home6.jpeg";
+import home7 from "/public/images/home7.jpeg";
+import home8 from "/public/images/home8.jpeg";
+import home9 from "/public/images/home9.jpeg";
+import home10 from "/public/images/home10.jpeg";
+import home11 from "/public/images/home11.jpeg";
+import home12 from "/public/images/home12.jpeg";
+import nobilis from "/public/images/nobilis.jpeg";
+import apricus from "/public/images/apricus.jpeg";
+import lux_solaris from "/public/images/lux_solaris.jpeg";
+import lautus from "/public/images/lautus.jpeg";
+import exquisitus from "/public/images/exquisitus.jpeg";
 
 
 export const mainlogo = logo;
 export const billboardImg = billboard;
 export const aboutImg = about;
 export const heroImg = hero;
+export const heroImg2 = hero2;
+export const heroImg3 = hero3;
+export const heroImg4 = hero4;
 export const goldPkg = gold;
 export const regularPkg = regular;
 export const wgrPkg = wgr;
@@ -24,6 +48,25 @@ export const premiumPkg = premium;
 export const truckImg = truck;
 export const starImg = star;
 export const resultImg = result;
+export const homeImage = homeImg;
+export const homeImg1 = home;
+export const homeImg2 = home2;
+export const homeImg3 = home3;
+export const homeImg4 = home4;
+export const homeImg5 = home5;
+export const homeImg6 = home6;
+export const homeImg7 = home7;
+export const homeImg8 = home8;
+export const homeImg9 = home9;
+export const homeImg10 = home10;
+export const homeImg11 = home11;
+export const homeImg12 = home12;
+export const nobilisPkg = nobilis;
+export const apricusPkg = apricus;
+export const exquisitusPkg = exquisitus;
+export const lautusPkg = lautus;
+export const lux_solarisPkg = lux_solaris;
+
 
 
 export const carousel = [
@@ -142,4 +185,124 @@ export const testimonials = [
           secondClassName: "service_text3"
     }
   ];
+
+  export const packagesList = [
+    {
+      id: 1,
+      image: nobilisPkg,
+      name: "Nobilis",
+      category: "Featured Packages",
+      price: 160000
+    },
+    {
+      id: 2,
+      image: apricusPkg,
+      name: "Apricus",
+      category: "Featured Packages",
+      price: 160000
+    },
+    {
+      id: 3,
+      image: exquisitusPkg,
+      name: "Exquisitus",
+      category: "Featured Packages",
+      price: 160000
+    },
+    {
+      id: 4,
+      image: lux_solarisPkg,
+      name: "Lux Solaris",
+      category: "Featured Packages",
+      price: 160000
+    },
+    {
+      id: 5,
+      image: lautusPkg,
+      name: "Lautus",
+      category: "Featured Packages",
+      price: 160000
+    },
+    {
+      id: 6,
+      image: nobilisPkg,
+      name: "Nobilis",
+      category: "Featured Packages",
+      price: 160000
+    },
+  ];
   
+
+  export const stories = [
+    {
+        profileImg: '/images/about.jpeg',
+        profileName: 'Alice',
+        title: [
+            "Showcasing creative",
+            "portfolios and projects",
+            "from top designers"
+        ],
+        linkLabel: "Read More",
+        linkSrc: "behance.net",
+        storyImg: "/images/home.png"
+    },
+    {
+        profileImg: '/images/about3.jpeg',
+        profileName: 'Alice',
+        title: [
+            "Showcasing creative",
+            "portfolios and projects",
+            "from top designers"
+        ],
+        linkLabel: "Visit",
+        linkSrc: "behance.net",
+        storyImg: "/images/hero2.png"
+    },
+    {
+        profileImg: '/images/about5.jpeg',
+        profileName: 'Alice',
+        title: [
+            "Showcasing creative",
+            "portfolios and projects",
+            "from top designers"
+        ],
+        linkLabel: "View More",
+        linkSrc: "behance.net",
+        storyImg: "/images/hero4.png"
+    },
+    {
+        profileImg: '/images/about.jpeg',
+        profileName: 'Alice',
+        title: [
+            "Showcasing creative",
+            "portfolios and projects",
+            "from top designers"
+        ],
+        linkLabel: "Read More",
+        linkSrc: "behance.net",
+        storyImg: "/images/home.png"
+    },
+    {
+        profileImg: '/images/about3.jpeg',
+        profileName: 'Alice',
+        title: [
+            "Showcasing creative",
+            "portfolios and projects",
+            "from top designers"
+        ],
+        linkLabel: "Read More",
+        linkSrc: "behance.net",
+        storyImg: "/images/hero2.png"
+    },
+    {
+        profileImg: '/images/about5.jpeg',
+        profileName: 'Alice',
+        title: [
+            "Showcasing creative",
+            "portfolios and projects",
+            "from top designers"
+        ],
+        linkLabel: "Explore",
+        linkSrc: "behance.net",
+        storyImg: "/images/hero4.png"
+    }
+];
